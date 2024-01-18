@@ -1,0 +1,66 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: myscaledobject
+  namespace: foobar
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: mydeployment
+  fallback:
+    failureThreshold: 4
+    replicas: 12
+  advanced:
+    scalingModifiers:
+      formula: "max(trigger_1, trigger_2)"
+      metricType: Value
+      target: "1"
+      activationTarget: "0"
+  pollingInterval: 30
+  minReplicaCount: 3
+  maxReplicaCount: 30
+  triggers:
+  - type: prometheus
+    name: trigger_1
+    metricType: Value
+    metadata:
+      serverAddress: http://fake.svc.cluster.local:9090
+      threshold: "1"
+      activationThreshold: "0"
+      query: >
+        max(mymetric1{}[2m])
+  - metadata:
+      podSelector: name=busybox
+      value: "1"
+    name: trigger_2
+    # this can be any trigger that is valid
+    # Initially I encountered this using metricType:Value for a prometheus trigger
+    # kubernetes-workload is only used so it can be setup easily
+    type: kubernetes-workload
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployment
+  namespace: foobar
+  labels:
+    app: busybox
+spec:
+  selector:
+    matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      containers:
+        - name: busybox
+          args:
+            - while true; do sleep 30; done;
+          command:
+            - /bin/bash
+            - -c
+            - --
+          image: ubuntu:latest
+          imagePullPolicy: Always

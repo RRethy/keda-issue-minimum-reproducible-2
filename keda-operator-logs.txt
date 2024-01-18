@@ -1,0 +1,1000 @@
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:31:55Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:31:55Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:31:55Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:31:55Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:31:55Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:31:55Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:31:55Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "cbc981d7-722a-4929-85af-33e86148003f"}
+2024-01-18T20:32:10Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:10Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:10Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:10Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:10Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:10Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:10Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:10Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:10Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "39483638-502b-4ee1-b8d5-69db7266b6e4"}
+2024-01-18T20:32:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:32:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:32:16Z	ERROR	scale_handler	error getting metric source	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "source": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:717
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:32:16Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject fallback.replicas	{"scaledobject.Name": "myscaledobject", "scaledObject.Namespace": "foobar", "scaleTarget.Name": "mydeployment", "Original Replicas Count": 3, "New Replicas Count": 12}
+2024-01-18T20:32:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:26Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:26Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "feb37625-6b54-400f-aea2-b62a506387c3"}
+2024-01-18T20:32:41Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:41Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:41Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:41Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:41Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:41Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "c250d334-cfaa-43b4-aeb7-6615779e1f7a"}
+2024-01-18T20:32:46Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:32:46Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:32:46Z	ERROR	scale_handler	error getting metric source	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "source": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:717
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:32:46Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject fallback.replicas	{"scaledobject.Name": "myscaledobject", "scaledObject.Namespace": "foobar", "scaleTarget.Name": "mydeployment", "Original Replicas Count": 3, "New Replicas Count": 12}
+2024-01-18T20:32:56Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:56Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:56Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:56Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:32:56Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:32:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:32:56Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "7f665118-a0df-407b-96fe-17bcf90ce074"}
+2024-01-18T20:33:11Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:11Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:11Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:11Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:11Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:11Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "a75781ee-3467-4f0c-94fc-0b3646ae7e04"}
+2024-01-18T20:33:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:33:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:33:16Z	ERROR	scale_handler	error getting metric source	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "source": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:717
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:33:16Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject fallback.replicas	{"scaledobject.Name": "myscaledobject", "scaledObject.Namespace": "foobar", "scaleTarget.Name": "mydeployment", "Original Replicas Count": 3, "New Replicas Count": 12}
+2024-01-18T20:33:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:26Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:26Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "1b8c82b3-2c54-4dea-b3b1-831dbfc5ad9e"}
+2024-01-18T20:33:41Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:41Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:41Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:41Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:41Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:41Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "7867c2c3-9b80-465a-9b68-9537df0bf124"}
+2024-01-18T20:33:46Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:33:46Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:33:46Z	ERROR	scale_handler	error getting metric source	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "source": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:717
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:33:46Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject fallback.replicas	{"scaledobject.Name": "myscaledobject", "scaledObject.Namespace": "foobar", "scaleTarget.Name": "mydeployment", "Original Replicas Count": 3, "New Replicas Count": 12}
+2024-01-18T20:33:56Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:56Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:56Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:56Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:33:56Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:33:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:33:56Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "1df1ad98-a11e-4f78-a72a-344d688c262b"}
+2024-01-18T20:34:11Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:11Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:11Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:11Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:11Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:11Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "9b398d26-b8bf-4b54-b997-a0c92952a5f1"}
+2024-01-18T20:34:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:34:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:34:16Z	ERROR	scale_handler	error getting metric source	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "source": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:717
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:34:16Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject fallback.replicas	{"scaledobject.Name": "myscaledobject", "scaledObject.Namespace": "foobar", "scaleTarget.Name": "mydeployment", "Original Replicas Count": 3, "New Replicas Count": 12}
+2024-01-18T20:34:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:26Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:26Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "45056c1a-b94a-48f0-b82d-a3471808d0d3"}
+2024-01-18T20:34:41Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:41Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:41Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:41Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:41Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:41Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:41Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "9fdd5d8a-b5cf-47ab-afc8-47617201d8c8"}
+2024-01-18T20:34:46Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:34:46Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:34:46Z	ERROR	scale_handler	error getting metric source	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "source": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:46Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:717
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:34:46Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject fallback.replicas	{"scaledobject.Name": "myscaledobject", "scaledObject.Namespace": "foobar", "scaleTarget.Name": "mydeployment", "Original Replicas Count": 3, "New Replicas Count": 12}
+2024-01-18T20:34:56Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:56Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:56Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:56Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:34:56Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:34:56Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:34:56Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "eeb8cf49-3af2-4a79-80c4-2de98327a6f3"}
+2024-01-18T20:35:11Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:35:11Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:35:11Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:35:11Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:35:11Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:11Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:35:11Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "db334e92-ce57-4c35-8b98-5ff61e2c5792"}
+2024-01-18T20:35:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:35:16Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:699
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:35:16Z	ERROR	scale_handler	error getting metric source	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "source": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:16Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScalerState
+	/workspace/pkg/scaling/scale_handler.go:717
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).getScaledObjectState
+	/workspace/pkg/scaling/scale_handler.go:590
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).checkScalers
+	/workspace/pkg/scaling/scale_handler.go:241
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).startScaleLoop
+	/workspace/pkg/scaling/scale_handler.go:180
+2024-01-18T20:35:16Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject fallback.replicas	{"scaledobject.Name": "myscaledobject", "scaledObject.Namespace": "foobar", "scaleTarget.Name": "mydeployment", "Original Replicas Count": 3, "New Replicas Count": 12}
+2024-01-18T20:35:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:129
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:35:26Z	ERROR	prometheus_scaler	error executing prometheus query	{"type": "ScaledObject", "namespace": "foobar", "name": "myscaledobject", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scalers.(*prometheusScaler).GetMetricsAndActivity
+	/workspace/pkg/scalers/prometheus_scaler.go:359
+github.com/kedacore/keda/v2/pkg/scaling/cache.(*ScalersCache).GetMetricsAndActivityForScaler
+	/workspace/pkg/scaling/cache/scalers_cache.go:139
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:508
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:35:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:35:26Z	INFO	fallback	Fallback can only be enabled for triggers with metric of type AverageValue	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject"}
+2024-01-18T20:35:26Z	ERROR	scale_handler	error getting metric for scaler	{"scaledObject.Namespace": "foobar", "scaledObject.Name": "myscaledobject", "scaler": "trigger_1", "error": "Get \"http://fake.svc.cluster.local:9090/api/v1/query?query=max%28mymetric1%7B%7D%5B2m%5D%29%0A&time=2024-01-18T20:35:26Z\": dial tcp: lookup fake.svc.cluster.local on 10.96.0.10:53: no such host"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScaledObjectMetrics
+	/workspace/pkg/scaling/scale_handler.go:522
+github.com/kedacore/keda/v2/pkg/metricsservice.(*GrpcServer).GetMetrics
+	/workspace/pkg/metricsservice/server.go:47
+github.com/kedacore/keda/v2/pkg/metricsservice/api._MetricsService_GetMetrics_Handler
+	/workspace/pkg/metricsservice/api/metrics_grpc.pb.go:99
+google.golang.org/grpc.(*Server).processUnaryRPC
+	/workspace/vendor/google.golang.org/grpc/server.go:1343
+google.golang.org/grpc.(*Server).handleStream
+	/workspace/vendor/google.golang.org/grpc/server.go:1737
+google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/workspace/vendor/google.golang.org/grpc/server.go:986
+2024-01-18T20:35:26Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"myscaledobject","namespace":"foobar"}, "namespace": "foobar", "name": "myscaledobject", "reconcileID": "69e723d1-de9c-477b-bce7-51b32a0d541e"}
